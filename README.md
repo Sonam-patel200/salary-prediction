@@ -29,3 +29,22 @@ Steps performed:
    - **Trained models**: Linear Regression, Ridge, Lasso, Gradient Boosting, XGBoost, SVR, and KNN Regression. 
    - **Metrics**: Evaluated using MAE, MSE, RMSE, and R² score.
    - **Visualization**: Plotted metrics for comparison.
+ ## 6. **Performance Comparison**
+   - Used a custom scorer and train test comparison function for consistent evaluation.
+   - Analyzed results to determine the best model.
+ ## 7. **Model Selection**
+   - Selected Gradient Boosting Regression as the best-performing model with an R2 score of `0.9495` for final pipeline integration.
+ ## 7. **Hyperparameter Tuning**
+   - Conducted hyperparameter tuning using RandomizedSearchCV to optimize the Gradient Boosting Regressor.
+   - Tuned hyperparameters such as `n_estimators`, `learning_rate`, `max_depth`, `min_samples_split`, `min_samples_leaf`, and `subsample`.
+ ## 8. **Pipeline Building**
+   - Built a preprocessing pipeline using ColumnTransformer to handle different types of categorical encoding (ordinal and nominal).
+   - Integrated SelectKBest for feature selection within the pipeline to automatically choose the most relevant features.
+   - Incorporated the best-performing model, Gradient Boosting Regressor, into the pipeline.
+   - Configured the final pipeline to include all preprocessing steps, feature selection, and the regression model for seamless integration and deployment.
+   - Ensured that the entire pipeline, including preprocessing and model training, could be saved and reused efficiently.
+### 9. **Web Application Deployment**
+   - Developed a web application using Streamlit for  easy and interactive salary prediction.
+   - Created a user-friendly interface for inputting employee information and obtaining salary predictions.
+   - Deployed the application using Streamlit's built-in sharing platform.
+   - Included a `requirements.txt` file to ensure easy replication of the development environment for deployment.
